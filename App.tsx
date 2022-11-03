@@ -9,6 +9,12 @@ import {
 } from "@expo-google-fonts/inter";
 import { Loading } from "./src/components/Loading";
 import { Routes } from "./src/routes";
+import "./src/services/notificationsConfig";
+import { getPushNotificationToken } from "./src/services/getPushNotificationToken";
+import { useRef } from "react";
+import {} from "expo";
+
+const getNotificationListener = useRef();
 
 export default function App() {
   const [fontsLoaded] = useFonts({
